@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle de LED</title>
+</head>
+<body>
+    <h1>Controle de LED</h1>
+    <button onclick="ligarLed()">Ligar LED</button>
+    <button onclick="desligarLed()">Desligar LED</button>
+
+    <script>
+        function ligarLed() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "/on", true);
+            xhttp.send();
+        }
+
+        function desligarLed() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "/off", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
